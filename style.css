@@ -1,0 +1,19 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+.dd_menu {
+  margin-top: 25px;
+}
+
+/* parameter divs default to 'display: none' so that the  select dropdown can start on 'none'*/
+.parameterDivs {
+  display: none;
+}
+.parameter {
+  margin: 12px;
+}

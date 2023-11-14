@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="./downloadPNG.js"></script>
+    <script src="./gmCanvas.js"></script>
+    <script src="./gmHTML.js"></script>
+    <script src="./gmPlotArea.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <main>
+    </main>
+    <div>
+      <script src="sketch.js"></script>
+      <button onclick="downloadPNG()">download png</button>
+    </div> 
+    
+<!--     the select dropdown menu let's users decide which parameter div to focus on-->
+    <div id="selectMenu" class="dd_menu">
+      <label for="menu">Select:</label>
+      <select name="selectMenuOption" id="selectMenuOption" onchange="gmHTML.selectMenu.optionChanged()">
+        <option value="none" selected>none</option>
+        <option value="Canvas Settings">Canvas Settings</option>
+        <option value="Plot Area Settings">Plot Area Settings</option>
+      </select>
+    </div>
+<!--     user sets the parameters for the canvas and its background -->
+    <div class="parameterDivs" id="canvas_settings">
+      <div class = "parameter">background color: <input type="color" id="bg_color_selector" oninput="gmHTML.canvasParameters.bgColorChange()"></div>
+      <div class = "parameter">height (px): <input type="number" id="canvas_height_input" onchange="gmHTML.canvasParameters.canvasHeightChange()"></div>
+      <div class = "parameter">width (px): <input type="number" id="canvas_width_input" onchange="gmHTML.canvasParameters.canvasWidthChange()"></div>
+    </div>
+    
+<!--     user sets the plot area paramters -->
+    <div class="parameterDivs" id="plot_area_settings">
+      <div class = "parameter">plot area color: <input type="color" id="plot_area_color_selector" oninput="gmHTML.plotAreaParameters.bgColorChange()"></div>
+      <div class = "parameter">height (px): <input type="number" id="plot_area_height_input" onchange="gmHTML.plotAreaParameters.heightChange()"></div>
+      <div class = "parameter">width (px): <input type="number" id="plot_area_width_input" onchange="gmHTML.plotAreaParameters.widthChange()"></div>
+    </div>
+
+  </body>
+</html>
+
